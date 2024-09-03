@@ -53,4 +53,47 @@ def butBetter():
     print("I can",verb,"better than you!")
     print((verb+" ")*5)
 
-butBetter()
+### F-Strings
+
+num=3000
+fraction= 1/3
+print(num*fraction, 'is', fraction*100, '% of', num)
+print(num*fraction, 'is', str(fraction*100)+'% of', num)
+print(f'{num*fraction} is {fraction*100}% of {num}')
+
+###Conditions for Branching -> Logical Operators
+##Remember that for this to work, both objects must be same Type
+#here we had to change the int 4 to a str
+
+secret = '4'
+guess=input("Guess the secret number between 1-10: ")
+if guess==secret :
+    print('Correct')
+else :print('Wrong')
+
+###Branching Example 1
+
+pset_time=12
+sleep_time=2
+if (pset_time+sleep_time)>24:
+    print('impossible!')
+elif(pset_time+sleep_time)>=24:
+    print('full schedule!')
+else:
+    leftover=abs(24-pset_time-sleep_time)
+    print(leftover,'h of free time!')
+print('end of day')
+
+##Branching Example 2
+
+snumber=6
+
+mguess=int(input("Guess a number: "))
+if mguess<snumber:
+    print('Too low')
+elif mguess>snumber:
+    print('Too high')
+elif mguess==snumber:
+    print("That's exactly it")
+
+
